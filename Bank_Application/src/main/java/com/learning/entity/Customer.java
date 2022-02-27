@@ -13,6 +13,7 @@ import javax.validation.constraints.NotBlank;
 import com.learning.enums.EnabledStatus;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
@@ -22,23 +23,21 @@ import lombok.NoArgsConstructor;
  * @time 1:22:20 PM
  */
 @Entity
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 public class Customer extends User{
-	@NotBlank
 	private String phone;
 	private String pan;
 	private String aadhar;
 	@OneToMany
 	private Set<Account> accounts;
-	@NotBlank
+
 	private String secretQuestion;
 	private LocalDate createdDate;
 	
 	private EnabledStatus status = EnabledStatus.ENABLED;
-	
-	@NotBlank
 	private String secretAnswer;
 	@OneToMany
 	private Set<Beneficiary> beneficiaries;
