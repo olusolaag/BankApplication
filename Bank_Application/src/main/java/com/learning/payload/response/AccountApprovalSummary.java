@@ -17,9 +17,11 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class AccountToBeApproved {
-	private String accountType;
+public class AccountApprovalSummary {
+	private String accType;
 	private String customerName;
-	private LocalDate accountNumber;
-	private String approved="No";
+	private long accNo;
+	private LocalDate dateCreated;
+	private String approved = "no";
+
 }

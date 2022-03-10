@@ -1,9 +1,11 @@
 /**
  * 
  */
-package com.learning.payload.response;
+package com.learning.payload.request;
 
 import java.time.LocalDate;
+
+import javax.validation.constraints.NotNull;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,8 +19,9 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ApproveBeneficiaryResponse {
+public class ApprovedBeneficiaryRequest {
 	private long fromCustomer;
+	@NotNull
 	private LocalDate beneficiaryAddedDate;
 	private long beneficiaryAccount;
 	private String approved="Yes";

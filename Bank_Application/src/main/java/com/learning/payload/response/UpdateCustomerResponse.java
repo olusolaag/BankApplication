@@ -25,8 +25,10 @@ public class UpdateCustomerResponse {
 	private String phone;
 	
 	private String pan;
+	private String panImage;
 	
 	private String aadhar;
+	private String aadharImage;
 	
 	private String secretQuestion;
 	

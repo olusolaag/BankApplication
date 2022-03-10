@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 public class StaffSummary {
 	private Long staffId;
 	private String staffName;
-	private EnabledStatus staus;
+	private EnabledStatus status;
 	
 
 }

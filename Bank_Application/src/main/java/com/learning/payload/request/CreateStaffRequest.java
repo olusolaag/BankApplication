@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 public class CreateStaffRequest {
 	private String staffFullName;
 	private String staffUserName;
-	private String password;
+	private String staffpassword;
 	
 
 }

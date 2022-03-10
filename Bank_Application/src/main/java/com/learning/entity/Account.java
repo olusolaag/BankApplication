@@ -15,6 +15,7 @@ import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 
 import com.learning.enums.AccountType;
+import com.learning.enums.EnabledStatus;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -37,6 +38,7 @@ public class Account {
 	private double accountBalance;
 	private String approved;
 	private LocalDate dateOfCreation;
+	private EnabledStatus accountStatus;
 	@ManyToOne
 	@NotNull
 	private Customer customer;

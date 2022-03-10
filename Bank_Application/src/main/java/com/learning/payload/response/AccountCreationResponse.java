@@ -26,9 +26,4 @@ public class AccountCreationResponse {
 	private long accountNumber;
 	private LocalDate dateOfCreation;
 	private Long customerId;
-	
-	
-	
-	
-
 }

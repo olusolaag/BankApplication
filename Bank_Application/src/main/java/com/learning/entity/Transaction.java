@@ -3,7 +3,7 @@
  */
 package com.learning.entity;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.learning.enums.TransactionType;
 
 import lombok.AllArgsConstructor;
@@ -31,12 +32,17 @@ public class Transaction {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long transactionId;
-	private LocalDate date;
+	private LocalDateTime date;
 	private String reference;
 	private double amount;
 	private TransactionType transactionType;
 	@NotNull
 	@ManyToOne
-	private Account account;
+	@JsonIgnore
+	private Account fromAccount;
+	@NotNull
+	@ManyToOne
+	@JsonIgnore
+	private Account toAccount;
 
 }

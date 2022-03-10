@@ -4,11 +4,11 @@
 package com.learning.entity;
 
 import java.time.LocalDate;
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
-import javax.validation.constraints.NotBlank;
 
 import com.learning.enums.EnabledStatus;
 
@@ -36,11 +36,13 @@ public class Customer extends User{
 
 	private String secretQuestion;
 	private LocalDate createdDate;
+	private String panImage;
+	private String aadharImage;
 	
 	private EnabledStatus status = EnabledStatus.ENABLED;
 	private String secretAnswer;
 	@OneToMany
-	private Set<Beneficiary> beneficiaries;
+	private Set<Beneficiary> beneficiaries = new HashSet<>();
 	
 	
 
